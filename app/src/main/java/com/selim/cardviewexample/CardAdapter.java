@@ -22,7 +22,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     public CardAdapter(String[] names, String[] urls, Bitmap[] images){
         super();
-        items = new ArrayList<ListItem>();
+        items = new ArrayList<>();
         for(int i =0; i<names.length; i++){
             ListItem item = new ListItem();
             item.setName(names[i]);
@@ -34,8 +34,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_card_view, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_card_view, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }
